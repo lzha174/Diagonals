@@ -17,6 +17,7 @@ public class BSTtoTBST {
                 root.right = previous;
                 root.rightThread=true;
             }
+            // The moment I go left, I pass root!!
             inorder(root.left, root);
         }
     }

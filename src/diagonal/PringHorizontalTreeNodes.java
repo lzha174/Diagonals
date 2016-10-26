@@ -7,12 +7,15 @@ class Node{
 	int data;
 	Node left;
 	Node right;
+	Node sibling;
     boolean rightThread;
 	public Node(int data){
 		this.data = data;
 		this.left = null;
 		this.right =null;
+		this.sibling = null;
 		rightThread = false;
+		
 	}
 }
 
@@ -47,9 +50,17 @@ public class PringHorizontalTreeNodes {
  			levelNodes = q.size();
  			while(levelNodes>0){
 				Node n = (Node)q.remove();
+				
 				System.out.print(" " + n.data);
 				if(n.left!=null) q.add(n.left);
+				
 				if(n.right!=null) q.add(n.right);
+				
+				if (n.left != null && n.right != null)
+				{
+					n.left.sibling = n.right;
+					System.out.print("\n sibling of  "+ n.left.data + " is " +  n.left.sibling.data + "\n");
+				}
 				levelNodes--;
 			}
 			System.out.println("");
