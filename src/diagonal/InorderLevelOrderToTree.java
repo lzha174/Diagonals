@@ -29,6 +29,7 @@ public class InorderLevelOrderToTree {
 		int[] newlevel = new int[iEnd - iStart + 1];
 		int x = 0;
 		for (int i = 0; i < levelOrder.length; i++) {
+			// so the new older still respect the level order...
 			if (findIndex(inorder, levelOrder[i], iStart, iEnd) != -1) {
 				newlevel[x] = levelOrder[i];
 				x++;
