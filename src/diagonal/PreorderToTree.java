@@ -6,6 +6,7 @@ public class PreorderToTree {
 	public Node constructTree(int[] preorder, int data, int min, int max) {
 		if (pIndex < preorder.length) {
 			if (preorder[pIndex] > min && preorder[pIndex] < max) {
+				
 				Node root = new Node(data);
 				pIndex++;
 				if (pIndex < preorder.length) {
