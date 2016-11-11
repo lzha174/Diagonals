@@ -51,11 +51,10 @@ public class PreOrderTree {
 		root.right.right = new Node(7);
 		
 		PreOrderTree i = new PreOrderTree();
-		i.preOrderRecursive(root);
-		System.out.println();
+
 		i.preorderIteration(root);
 		System.out.println();
-		i.DFS(root);
+		//i.DFS(root);
 	}
 
 }
